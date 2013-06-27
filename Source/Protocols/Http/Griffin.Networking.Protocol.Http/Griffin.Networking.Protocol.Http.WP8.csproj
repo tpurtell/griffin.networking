@@ -129,7 +129,7 @@
   <ItemGroup>
     <ProjectReference Include="..\..\..\Griffin.Networking.Core\Griffin.Networking.WP8.csproj">
       <Project>{599D307F-532C-4C3A-8F9E-1F74B6F0C5E8}</Project>
-      <Name>Griffin.Networking</Name>
+      <Name>Griffin.Networking.WP8</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />

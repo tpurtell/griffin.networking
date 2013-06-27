@@ -139,7 +139,12 @@
     <Compile Include="SocketWriter.cs" />
     <Compile Include="StreamSocketWriterJob.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Concurrent\Concurrent.csproj">
+      <Project>{E6D48181-CC1C-47CF-88F6-186C66A22759}</Project>
+      <Name>Concurrent %28Libraries\Concurrent\Concurrent%29</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).$(TargetFrameworkVersion).Overrides.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\$(TargetFrameworkIdentifier)\$(TargetFrameworkVersion)\Microsoft.$(TargetFrameworkIdentifier).CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
