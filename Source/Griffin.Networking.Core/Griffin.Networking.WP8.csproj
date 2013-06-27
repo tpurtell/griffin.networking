@@ -25,7 +25,7 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\WP8\Debug\</OutputPath>
     <IntermediateOutputPath>obj\WP8\Debug</IntermediateOutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DefineConstants>TRACE;DEBUG;SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
@@ -34,19 +34,29 @@
     <Optimize>true</Optimize>
     <IntermediateOutputPath>obj\WP8\Release</IntermediateOutputPath>
     <OutputPath>bin\WP8\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
+    <DefineConstants>TRACE;SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\Griffin.Networking.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DefineConstants>SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineConstants>SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|ARM'">
+    <DefineConstants>SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|ARM'">
+    <DefineConstants>SILVERLIGHT;WINDOWS_PHONE;SAFE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +150,7 @@
     <Compile Include="SliceSocketWriterJob.cs" />
     <Compile Include="SocketWriter.cs" />
     <Compile Include="StreamSocketWriterJob.cs" />
+    <Compile Include="WP8Socket.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Concurrent\Concurrent.csproj">

@@ -20,7 +20,11 @@ namespace Griffin.Networking.Buffers
         /// <remarks>You must use <see cref="Assign(IBufferSlice,int)"/> if you use this constructor<para>Initialied using ASCII as encoding.</para></remarks>
         public StringBufferSliceReader()
         {
+#if WINDOWS_PHONE
+            _encoding = Encoding.UTF8;
+#else
             _encoding = Encoding.ASCII;
+#endif
         }
 
         /// <summary>
@@ -42,7 +46,11 @@ namespace Griffin.Networking.Buffers
             if (slice == null) throw new ArgumentNullException("slice");
             _reader = slice;
             _length = count;
+#if WINDOWS_PHONE
+            _encoding = Encoding.UTF8;
+#else
             _encoding = Encoding.ASCII;
+#endif
         }
 
         /// <summary>
