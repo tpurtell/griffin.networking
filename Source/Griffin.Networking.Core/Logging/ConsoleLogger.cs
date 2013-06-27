@@ -46,6 +46,7 @@ namespace Griffin.Networking.Logging
                 Console.WriteLine(BuildExceptionDetails(exception, 4));
             //Console.ForegroundColor = color;
         }
+        /*
 
         /// <summary>
         /// Get a color for a specific log level
@@ -70,5 +71,6 @@ namespace Griffin.Networking.Logging
                     return ConsoleColor.Blue;
             }
         }
+        */
     }
 }

@@ -21,7 +21,8 @@ namespace Griffin.Networking.Protocol.Http.Implementation
         /// <filterpriority>1</filterpriority>
         public IEnumerator<IHeaderItem> GetEnumerator()
         {
-            return _items.Values.GetEnumerator();
+            foreach (var item in _items.Values)
+                yield return item;
         }
 
         /// <summary>
