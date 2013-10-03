@@ -40,7 +40,7 @@ namespace Griffin.Networking.Servers
             _listenerArgs.Completed += OnAccept;
 
             // *2 since we need one for each send/receive pair.
-            _bufferSliceStack = new BufferSliceStack(configuration.MaximumNumberOfClients*2, configuration.BufferSize);
+            _bufferSliceStack = configuration.BufferSliceStack;
         }
 
 
